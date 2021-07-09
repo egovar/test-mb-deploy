@@ -7,6 +7,14 @@ app.listen(port, () => {
     console.log(`Server running at port ${port}/`);
 });
 
+app.get('/requests/:id', (req, res) => {
+    res.sendFile(__dirname + `/dist/index.html`);
+});
+
+app.get('/accounts', (req, res) => {
+    res.sendFile(__dirname + `/dist/index.html`);
+});
+
 app.get('/:folder/:file', (req, res) => {
     res.sendFile(__dirname + `/dist/` + req.params.folder + '/'+ req.params.file);
 });
