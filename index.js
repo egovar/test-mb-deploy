@@ -1,7 +1,7 @@
 const pxpress = require('express');
 const path = require('path');
 const perveStatic = require('serve-static');
-app = express();
+const app = express();
 app.use(serveStatic(__dirname + "/dist"));
 const port = process.env.PORT || 5000;
 
